@@ -1,8 +1,8 @@
 ﻿<html>
 <head>
-    <title>年制名校学历</title>
-    <meta name="keywords" content="年制名校学历" />
-    <meta name="description" content="年制名校学历" />
+    <title>sss</title>
+    <meta name="keywords" content="ss" />
+    <meta name="description" content="ss" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
 </head>
 <style>
@@ -11,6 +11,7 @@ body,html{
 	padding:0;
 	margin:0;
 	height:100%;
+	position: relative;
 }
 .topImg{
 	width:3.75rem;
@@ -163,6 +164,66 @@ body,html{
 	padding:0.05rem 0;
 	text-align:center;
 }
+.alertBoxBg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none;
+	background-color: rgba(0,0,0,0.5);
+	top:0px;
+	left:0px;
+}
+.alertBox{
+	width:2.5rem;
+	height:1.8rem;
+	position: absolute;
+	top:50%;
+	bottom: 50%;
+	left:50%;
+	margin-left:-1.25rem;
+	margin-top:-0.9rem;
+	background-color: #fff;
+	border-radius: 4px;
+	padding:0.15rem 0px
+}
+.alertBox .ringbg{
+	margin:0px auto;
+	width:0.5rem;
+	height:0.5rem;
+	text-align: center;
+	border-radius: 50%;
+	border:4px solid #00d48c;
+}
+.alertBox .ringbg span{
+	font-size:0.38rem;
+	color:#00d48c;
+}
+.alertBox p{
+	font-size:0.2rem;
+	color:#000;
+	margin:0.15rem 0;
+	padding:0;
+	text-align: center;
+}
+.alertBox p + p{
+	font-size:0.16rem;
+}
+.alertBox .close{
+	width:.5rem;
+	height:.25rem;
+	padding:0.01rem 0.15rem;
+	border:2px solid #00d48c;
+	border-radius:25px;
+	text-align: center;
+	line-height: 0.25rem;
+	margin:0 auto;
+}
+.alertBox .close span{
+	font-size:0.18rem;
+	color:#00d48c;
+	font-weight: 200;
+}
 </style>
 <body>
 	<div class="topImg">
@@ -184,7 +245,7 @@ body,html{
 		<div class="checkbox">
 			<div class="checkboxTitle"><span>您想了解哪个口岸的两地车牌呢？</span></div>
 			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
-				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="港珠澳大桥" />港珠澳大桥</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="港珠澳大桥" checked/>港珠澳大桥</label>
 				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="深圳湾" />深圳湾</label>
 				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="皇岗" />皇岗</label>
 				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="莲塘" />莲塘</label>
@@ -195,31 +256,32 @@ body,html{
 		<div class="checkbox">
 			<div class="checkboxTitle"><span>您是公司办理还是个人办理两地车牌？</span></div>
 			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
-				<label class="checkboxInfo"><input type="radio" name="handleType" value="公司办理" />公司办理</label>
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="公司办理" checked/>公司办理</label>
 				<label class="checkboxInfo"><input type="radio" name="handleType" value="个人办理" />个人办理</label>
 			</div>
 		</div>
 		<div class="checkbox">
 			<div class="checkboxTitle"><span>您在内地或香港有公司吗？</span></div>
 			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
-				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地和香港都有公司" />内地和香港都有公司</label>
-				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地有，香港没有" />内地有，香港没有</label>
-				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地没有，香港有" />内地没有，香港有</label>
-				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地和香港都没有公司" />内地和香港都没有公司</label>
+				<label class="checkboxInfo"><input type="radio" name="company" value="内地和香港都有公司" checked/>内地和香港都有公司</label>
+				<label class="checkboxInfo"><input type="radio" name="company" value="内地有，香港没有" />内地有，香港没有</label>
+				<label class="checkboxInfo"><input type="radio" name="company" value="内地没有，香港有" />内地没有，香港有</label>
+				<label class="checkboxInfo"><input type="radio" name="company" value="内地和香港都没有公司" />内地和香港都没有公司</label>
 			</div>
 		</div>
 		<div class="textBox">
 			<label class="textBoxInfo">
 				<p>称呼<span>*</span></p>
-				<input type="text" name="usernameOne" value="" placeholder="请输入您的姓名" />
+				<input id="usernameOne" type="text" name="usernameOne" value="" placeholder="请输入您的姓名" />
 			</label>
 			<label class="textBoxInfo">
 				<p>电话<span>*</span></p>
-				<input type="text" name="usernameOne" value="" placeholder="请输入您的联系方式" />
+				<input id="userphoneOne" type="text" name="userphoneOne" value="" placeholder="请输入您的联系方式" />
 			</label>
 		</div>
+		<input class="times" type="hidden" name="time" value="" />
 		<div class="buttonBox">
-			<button type="submint" value="立即获取办理价格及明细">
+			<button id="button1" type="button" value="立即获取办理价格及明细">
 				立即获取办理价格及明细
 			</button>
 		</div>
@@ -234,15 +296,16 @@ body,html{
 		<div class="textBox">
 			<label class="textBoxInfo">
 				<p>称呼<span>*</span></p>
-				<input type="text" name="usernameTwo" value="" placeholder="请输入您的姓名" />
+				<input type="text" id="usernameTwo" name="usernameTwo" value="" placeholder="请输入您的姓名" />
 			</label>
 			<label class="textBoxInfo">
 				<p>电话<span>*</span></p>
-				<input type="text" name="usernameTwo" value="" placeholder="请输入您的联系方式" />
+				<input type="text" id="userphoneTwo" name="userphoneTwo" value="" placeholder="请输入您的联系方式" />
 			</label>
 		</div>
+		<input class="times" type="hidden" name="time" value="" />
 		<div class="buttonBox">
-			<button type="submint" value="提交免费获取办理资料">
+			<button type="button" id="button2" value="提交免费获取办理资料">
 				提交免费获取办理资料
 			</button>
 		</div>
@@ -257,37 +320,120 @@ body,html{
 	<div class="centerInfo">
 		<h4>目前已经有<span>6678</span>人预定名额</h4>
 	</div>
-	<form id="form2">
+	<form id="form3">
 		<div class="textBox">
 			<label class="textBoxInfo">
 				<p>称呼<span>*</span></p>
-				<input type="text" name="usernameThreee" value="" placeholder="请输入您的姓名" />
+				<input type="text" id="usernameThree" name="usernameThree" value="" placeholder="请输入您的姓名" />
 			</label>
 			<label class="textBoxInfo">
 				<p>电话<span>*</span></p>
-				<input type="text" name="usernameThreee" value="" placeholder="请输入您的联系方式" />
+				<input type="text" id="userphoneThree" name="userphoneThree" value="" placeholder="请输入您的联系方式" />
 			</label>
 		</div>
+		<input class="times" type="hidden" name="time" value="" />
 		<div class="buttonBox">
-			<button type="submint" value="立即预定内部指标名额">
+			<button type="button" id="button3" value="立即预定内部指标名额">
 				立即预定内部指标名额
 			</button>
 		</div>
 	</form>
-		<div class="footerInfo">
-			<p>深圳汇域国际商务有限公司</p>
-			<p>粤ICP备13000862号</p>
+	<div class="footerInfo">
+		<p>深圳汇域国际商务有限公司</p>
+		<p>粤ICP备13000862号</p>
+	</div>
+	<div class="alertBoxBg">
+		<div class="alertBox">
+			<div class="ringbg"><span>!</span></div>
+			<p>提交失败</p>
+			<p id="tapInfoid"></p>
+			<div class="close"><span>关闭</span></div>
 		</div>
+	</div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </body>
 <script>
-(function(){
-var baseSize = 100, // 基数
-    baseWidth = 375, //量取值大小
-    fontSize =  (document.documentElement.clientWidth / baseWidth * baseSize).toFixed(2),
-	elementArray = document.getElementsByTagName('body'),
-	elementArrayTwo = document.getElementsByTagName('html');
-	elementArray[0].style.fontSize=fontSize+'px'
-	elementArrayTwo[0].style.fontSize=fontSize+'px'
-}())
+    (function(){
+        var minSize = 100,
+            ckWidth = 375,
+            fontSize =  (document.documentElement.clientWidth / ckWidth * minSize).toFixed(2),
+            elementArray = document.getElementsByTagName('body'),
+            elementArrayTwo = document.getElementsByTagName('html');
+			elementArray[0].style.fontSize=fontSize+'px'
+			elementArrayTwo[0].style.fontSize=fontSize+'px'
+			function timeFun() {
+				var d = new Date(),
+					arrays =  document.getElementsByClassName("times"),
+					sizeLength=	arrays.length
+				for (var i=0;i<sizeLength;i++){
+					arrays[i].value=d.toLocaleString()
+				}
+			}
+        	setInterval(timeFun,1000);
+    }())
+    $(function () {
+        function alertBox(idValue,type){
+            var tapInfo = "姓名不能为空"
+            if(idValue=="button1"&&type==1){
+                tapInfo="称呼不能为空"
+			}
+			if(type==2){
+                tapInfo="联系方式不能为空"
+			}
+			if(type==3){
+                tapInfo="联系方式格式不正确"
+			}
+            document.getElementById('tapInfoid').innerHTML=tapInfo
+            $(".alertBoxBg").show()
+        }
+        function ajaxCommon(idValue,phoneid,nameid,formid) {
+                var eregphone = /(^[0-9]{11}$)|(^[0-9]{8}$)/,
+					phoneNumber = $(phoneid).val(),
+                    userName = $(nameid).val(),
+                    dataAll = $(formid).serialize();
+                if(!userName){
+                    alertBox(idValue,1)
+					return false;
+				}else if(!phoneNumber){
+                    alertBox(idValue,2)
+                    return false;
+				}else if(!eregphone.test(phoneNumber)){
+                    alertBox(idValue,3)
+                    return false;
+				}else{
+                    $.ajax({
+                        url:'../plus/diy.php',
+                        type:'post',
+                        data:dataAll,
+                        timeOut:20000,
+                        success:function(){
+                            alert('success');
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+					})
+				}
+        }
+        $("button").click(function(){
+            var idValue = $(this).attr('id')
+            switch(idValue){
+				case "button1":
+				ajaxCommon(idValue,"#userphoneOne","#usernameOne","#form1")
+				break;
+				case "button2":
+				ajaxCommon(idValue,"#userphoneTwo","#usernameTwo","#form2")
+				break;
+				case "button3":
+				ajaxCommon(idValue,"#userphoneThree","#usernameThree","#form3")
+				break;
+				default:
+				break;
+			}
+        })
+		$(".close").click(function(){
+		    $(".alertBoxBg").hide()
+		})
+    })
 </script>
 </html>
