@@ -1,0 +1,293 @@
+﻿<html>
+<head>
+    <title>年制名校学历</title>
+    <meta name="keywords" content="年制名校学历" />
+    <meta name="description" content="年制名校学历" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+</head>
+<style>
+body,html{
+	font-size:100px;
+	padding:0;
+	margin:0;
+	height:100%;
+}
+.topImg{
+	width:3.75rem;
+}
+.imgCommit{
+	width:3.75rem;
+}
+.classInfo{
+	height:0.44rem;
+	display:flex;
+	display:-webkit-flex;
+	padding-left: 15px;
+    padding-right:15px;
+	border-bottom:1px solid #f85959;
+}
+.classInfoBox{
+	flex:1;
+	margin:0;
+	padding:0;
+	height:0.44rem;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	line-height:0.44rem;
+	position:relative;
+}
+.classInfoBox a{
+	font-size:0.16rem;
+	position:relative;
+}
+.classInfoBox:last-child::after{
+	content:'';
+	width:0px;
+	height:0.2rem;
+	border:1px solid transparent;
+	position:absolute;
+	right:0px;
+	top:0.1rem;
+}
+.classInfoBox::after{
+	content:'';
+	width:0px;
+	height:0.2rem;
+	border:0.5px solid #2b2b2b;
+	position:absolute;
+	right:0px;
+	top:0.1rem;
+}
+#form1,#form2,#form3{
+	margin:0px;
+}
+.centerInfo{
+	display:flex;
+	display:-webkit-flex;
+	justify-content:center;
+}
+.centerInfo h2{
+	font-size:0.2rem;
+	color:#ff0000;
+}
+.centerInfo h3{
+	font-size:0.2rem;
+	color:#2b2b2b;
+	margin:0 0 0.1rem 0;
+}
+.centerInfo h6{
+	font-size:0.12rem;
+	color:#2b2b2b;
+	margin:0 0 0.1rem 0;
+	font-weight:200;
+}
+.centerInfo h4{
+	font-size:0.14rem;
+	color:#2b2b2b;
+	margin:0;
+}
+.centerInfo h4 span{
+	color:#ff0000;
+	font-size:0.2rem;
+}
+.checkbox{
+	padding-left:15px;
+	padding-right:15px;
+}
+.checkbox .checkboxInfo{
+	font-size:0.14rem;
+	margin-right:0.1rem;
+	height:0.3rem;
+	line-height:0.3rem;
+}
+.checkbox .checkboxInfo input{
+	height:0.14rem;
+	width:0.14rem;
+	border-radius:4px;
+	margin:0 0.05rem 0 0;
+	position:relative;
+	top:0.02rem;
+}
+.checkbox .checkboxTitle{
+	margin-top:0.15rem;
+	margin-bottom:0.10rem;
+}
+.checkbox .checkboxTitle span{
+	font-size:0.14rem;
+	color:#808080;
+}
+.textBox{
+	padding-left:15px;
+	padding-right:15px;
+}
+.textBoxInfo p{
+	font-size:0.12rem;
+	color:#808080;
+}
+.textBoxInfo input{
+	width:100%;
+	height:0.35rem;
+	border-radius:4px;
+	border:1px solid #808080;
+	padding-left:5px;
+	outline:none;
+	font-size:0.14rem;
+}
+.textBoxInfo p span{
+	color:#ff0000;
+}
+.buttonBox{
+	padding:0.15rem;
+}
+.buttonBox button{
+	width:100%;
+	border:none;
+	outline:none;
+	background-color:#f85959;
+	font-size:0.14rem;
+	height:0.44rem;
+	line-height:0.44rem;
+	border-radius:4px;
+	color:#fff;
+	text-align:center;
+}
+.footerInfo{
+	background-color:#000;
+	padding:0.05rem 0;
+}
+.footerInfo p{
+	margin:0;
+	font-size:0.12rem;
+	color:#fff;
+	padding:0.05rem 0;
+	text-align:center;
+}
+</style>
+<body>
+	<div class="topImg">
+		<img class="imgCommit" src="img/1.jpg">
+	</div>
+	<div class="classInfo">
+		<div class="classInfoBox"><a>港珠澳</a></div>
+		<div class="classInfoBox"><a>奥港车牌</a></div>
+		<div class="classInfoBox"><a>中港车牌</a></div>
+		<div class="classInfoBox"><a>深港车牌</a></div>
+	</div>
+	<div class="centerInfo">
+		<h2>测一测】两地车牌的办理价格</h2>
+	</div>
+	<div class="centerInfo">
+		<h4>目前已经有<span>6678</span>人参与评测</h4>
+	</div>
+	<form id="form1">
+		<div class="checkbox">
+			<div class="checkboxTitle"><span>您想了解哪个口岸的两地车牌呢？</span></div>
+			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="港珠澳大桥" />港珠澳大桥</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="深圳湾" />深圳湾</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="皇岗" />皇岗</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="莲塘" />莲塘</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="沙头角" />沙头角</label>
+				<label class="checkboxInfo"><input type="checkbox" name="twoAddress" value="全部口岸都想了解" />全部口岸都想了解</label>
+			</div>
+		</div>
+		<div class="checkbox">
+			<div class="checkboxTitle"><span>您是公司办理还是个人办理两地车牌？</span></div>
+			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="公司办理" />公司办理</label>
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="个人办理" />个人办理</label>
+			</div>
+		</div>
+		<div class="checkbox">
+			<div class="checkboxTitle"><span>您在内地或香港有公司吗？</span></div>
+			<div style="display:flex;display:-webkit-flex;flex-wrap:wrap">
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地和香港都有公司" />内地和香港都有公司</label>
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地有，香港没有" />内地有，香港没有</label>
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地没有，香港有" />内地没有，香港有</label>
+				<label class="checkboxInfo"><input type="radio" name="handleType" value="内地和香港都没有公司" />内地和香港都没有公司</label>
+			</div>
+		</div>
+		<div class="textBox">
+			<label class="textBoxInfo">
+				<p>称呼<span>*</span></p>
+				<input type="text" name="usernameOne" value="" placeholder="请输入您的姓名" />
+			</label>
+			<label class="textBoxInfo">
+				<p>电话<span>*</span></p>
+				<input type="text" name="usernameOne" value="" placeholder="请输入您的联系方式" />
+			</label>
+		</div>
+		<div class="buttonBox">
+			<button type="submint" value="立即获取办理价格及明细">
+				立即获取办理价格及明细
+			</button>
+		</div>
+	</form>
+	<div class="topImg">
+		<img class="imgCommit" src="img/2.jpg">
+	</div>
+	<div class="centerInfo">
+		<h4>目前已经有<span>6678</span>人获得资料</h4>
+	</div>
+	<form id="form2">
+		<div class="textBox">
+			<label class="textBoxInfo">
+				<p>称呼<span>*</span></p>
+				<input type="text" name="usernameTwo" value="" placeholder="请输入您的姓名" />
+			</label>
+			<label class="textBoxInfo">
+				<p>电话<span>*</span></p>
+				<input type="text" name="usernameTwo" value="" placeholder="请输入您的联系方式" />
+			</label>
+		</div>
+		<div class="buttonBox">
+			<button type="submint" value="提交免费获取办理资料">
+				提交免费获取办理资料
+			</button>
+		</div>
+	</form>
+	<div class="centerInfo" style="flex-direction:column;align-items:center">
+		<h3>客户信任与选择才是我们努力的动力</h3>
+		<h6>港珠澳两地车牌 汇域10年经验积淀</h6>
+	</div>
+	<div class="topImg">
+		<img class="imgCommit" src="img/3.jpg">
+	</div>
+	<div class="centerInfo">
+		<h4>目前已经有<span>6678</span>人预定名额</h4>
+	</div>
+	<form id="form2">
+		<div class="textBox">
+			<label class="textBoxInfo">
+				<p>称呼<span>*</span></p>
+				<input type="text" name="usernameThreee" value="" placeholder="请输入您的姓名" />
+			</label>
+			<label class="textBoxInfo">
+				<p>电话<span>*</span></p>
+				<input type="text" name="usernameThreee" value="" placeholder="请输入您的联系方式" />
+			</label>
+		</div>
+		<div class="buttonBox">
+			<button type="submint" value="立即预定内部指标名额">
+				立即预定内部指标名额
+			</button>
+		</div>
+	</form>
+		<div class="footerInfo">
+			<p>深圳汇域国际商务有限公司</p>
+			<p>粤ICP备13000862号</p>
+		</div>
+</body>
+<script>
+(function(){
+var baseSize = 100, // 基数
+    baseWidth = 375, //量取值大小
+    fontSize =  (document.documentElement.clientWidth / baseWidth * baseSize).toFixed(2),
+	elementArray = document.getElementsByTagName('body'),
+	elementArrayTwo = document.getElementsByTagName('html');
+	elementArray[0].style.fontSize=fontSize+'px'
+	elementArrayTwo[0].style.fontSize=fontSize+'px'
+}())
+</script>
+</html>
